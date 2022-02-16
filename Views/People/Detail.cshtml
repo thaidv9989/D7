@@ -1,0 +1,72 @@
+@model D7_ASPMVC.Models.PersonModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<div class="row">
+  <div class="col">
+    <!-- ID input -->
+    <div class="form-outline">
+      <input asp-for="ID" class="form-control"/>
+      <label asp-for="ID" class="control-label">@Html.DisplayNameFor(model => model.ID)</label>
+    </div>
+  </div>
+  <div class="col">
+    <!-- Email input -->
+    <div class="form-outline">
+      <input asp-for="Age" class="form-control"/>
+      <label asp-for="Age" class="control-label">@Html.DisplayNameFor(model => model.Age)</label>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col">
+    <!-- Name input -->
+    <div class="form-outline">
+     <input asp-for="LastName" class="form-control"/>
+      <label asp-for="LastName" class="control-label">@Html.DisplayNameFor(model => model.LastName)</label>
+    </div>
+  </div>
+  <div class="col">
+    <!-- Name input -->
+    <div class="form-outline">
+     <input asp-for="FirstName" class="form-control"/>
+      <label asp-for="FirstName" class="control-label">@Html.DisplayNameFor(model => model.FirstName)</label>
+    </div>
+  </div>
+  <div class="col">
+    <!-- Name input -->
+    <div class="form-outline">
+      <input asp-for="Gender" class="form-control"/>
+      <label asp-for="Gender" class="control-label">@Html.DisplayNameFor(model => model.Gender)</label>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col">
+    <!-- Email input -->
+    <div class="form-outline">
+      <input asp-for="PhoneNumber" class="form-control"/>
+      <label asp-for="PhoneNumber" class="control-label">@Html.DisplayNameFor(model => model.PhoneNumber)</label>
+    </div>
+  </div>
+  <div class="col">
+    <!-- Email input -->
+    <div class="form-outline">
+      <input asp-for="Address" class="form-control"/>
+      <label asp-for="Address" class="control-label">@Html.DisplayNameFor(model => model.Address)</label>
+    </div>
+  </div>
+</div>
+<hr />
+<form asp-action="Delete">
+    <input type="hidden" asp-for="ID" />
+    <input type="submit" value="Delete" class="btn btn-danger" /> |
+    <a asp-action="Index">Back to List</a>
+</form>
